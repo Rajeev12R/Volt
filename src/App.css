@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Great+Vibes&family=Pacifico&family=Style+Script&display=swap');
+
+.heading{
+  font-family: "Great Vibes", serif;
+font-weight: 400;
+font-style: normal;
+}
+.by{
+  font-family: "EB Garamond", serif;
+}
+.work{
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
