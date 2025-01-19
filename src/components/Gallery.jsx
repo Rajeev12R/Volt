@@ -37,7 +37,6 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Images Section */}
       {images.map((image, index) => (
         <div
           key={index}
