@@ -1,95 +1,132 @@
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { images } from '../assets'; // Import the images array from assets.js
-
-gsap.registerPlugin(ScrollTrigger);
+import React from 'react';
+import { images } from '../assets'; // Import your images
 
 const Work = () => {
-  useEffect(() => {
-    // Image gallery animation
-    gsap.fromTo(
-      '.gallery-image',
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: '.work',
-          start: 'top 80%',
-          end: 'bottom 50%',
-          scrub: true,
-        },
-      }
-    );
-  }, []);
-
-  const getCustomStyles = (index) => {
-    // Assign unique styles for each index
-    switch (index) {
-      case 0:
-        return 'w-[400px] h-[364px]'; // Example: Tall portrait
-      case 1:
-        return 'w-96 h-80'; // Example: Square
-      case 2:
-        return 'w-96 h-80'; // Example: Custom size
-      case 3:
-        return 'w-[400px] h-72'; // Example: Wide landscape
-      case 4:
-        return 'w-[400px] h-[300px]'; // Example: Portrait
-      case 5:
-        return 'w-96 h-80'; // Example: Custom size
-      case 6:
-        return 'w-96 h-80'; // Example: Custom size
-      case 7:
-        return 'w-96 h-80'; // Example: Custom size
-      case 8:
-        return 'w-96 h-72'; // Example: Custom size
-      case 9:
-        return 'w-96 h-80'; // Example: Custom size
-      case 10:
-        return 'w-[20rem] h-96'; // Example: Custom size
-      case 11:
-        return 'w-[30rem] h-[30rem]'; // Example: Custom size
-      case 12:
-        return 'w-96 h-96'; // Example: Custom size
-      case 13:
-        return 'w-96 h-96'; // Example: Custom size
-      case 14:
-        return 'w-96 h-96'; // Example: Custom size
-      default:
-        return '<w-80></w-80> h-80'; // Default size for others
-    }
-  };
-
   return (
-    <div className="work my-10 mx-20 w-full max-w-fit">
-      <div className="flex items-center">
-        {/* Title or heading can go here if needed */}
+    <div className="work my-10 mx-auto w-full max-w-[1400px] px-4">
+      <div className="flex justify-center items-center">
+      <h2 className="text-center text-4xl font-bold my-8 tracking-wide text-stone-600">
+        Our Work 
+      </h2>
+      <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="ml-4 h-6 w-6 transition-transform group-hover:translate-x-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
       </div>
 
-      {/* Gallery of images arranged with Flexbox */}
-      <div className="image-gallery flex justify-center flex-wrap gap-2 mt-4 py-8">
-        {images.map((image, index) => {
-          const customStyles = getCustomStyles(index); // Get styles for the current index
-
-          return (
-            <div
-              key={index}
-              className={`gallery-image ${customStyles} flex-shrink-0 rounded-lg overflow-hidden m-0 p-0`}
-            >
+      {/* Mixed Layouts */}
+      <div className="gallery flex flex-col gap-2 p-6">
+        {/* Row 1: Flex Row */}
+        <div className="flex flex-row gap-3">
+          <div className="flex-1 h-[300px] overflow-hidden">
+            <img
+              src={images[0]}
+              alt="Gallery Image 0"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="flex flex-col flex-1 gap-3">
+            <div className="h-[150px] overflow-hidden">
               <img
-                src={image}
-                alt={`Gallery image ${index}`}
+                src={images[1]}
+                alt="Gallery Image 1"
                 className="object-cover w-full h-full"
               />
             </div>
-          );
-        })}
+            <div className="h-[150px] overflow-hidden">
+              <img
+                src={images[2]}
+                alt="Gallery Image 2"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          <div className="flex-1 h-[300px] overflow-hidden">
+            <img
+              src={images[3]}
+              alt="Gallery Image 3"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+
+        {/* Row 2: Flex Row */}
+        <div className="flex flex-row gap-3">
+          <div className="flex flex-col flex-2 gap-3">
+            <div className="h-[200px] overflow-hidden">
+              <img
+                src={images[4]}
+                alt="Gallery Image 4"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="h-[200px] overflow-hidden">
+              <img
+                src={images[5]}
+                alt="Gallery Image 5"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          <div className="flex-1 h-[400px] overflow-hidden">
+            <img
+              src={images[6]}
+              alt="Gallery Image 6"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="flex flex-col flex-1 gap-3">
+            <div className="h-[200px] overflow-hidden">
+              <img
+                src={images[7]}
+                alt="Gallery Image 7"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="h-[200px] overflow-hidden">
+              <img
+                src={images[8]}
+                alt="Gallery Image 8"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Row 3: Flex Row */}
+        <div className="flex flex-row gap-3">
+          <div className="flex-1 h-[500px] overflow-hidden">
+            <img
+              src={images[9]}
+              alt="Gallery Image 9"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="flex-1 h-[500px] overflow-hidden">
+            <img
+              src={images[10]}
+              alt="Gallery Image 10"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="flex-1 h-[500px] overflow-hidden">
+            <img
+              src={images[11]}
+              alt="Gallery Image 11"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

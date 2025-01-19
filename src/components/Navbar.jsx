@@ -42,7 +42,7 @@ const Navbar = () => {
       <div class="fixed top-32 flex gap-4 items-center justify-center p-3 outline outline-gray-200 bg-white rounded-2xl max-w-full sm:max-w-4xl h-10">
         <a href="/" class="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg">Home</a>
         <a href="#" class="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg">About</a>
-        <a href="#" class="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg">Projects</a>
+        <a href="#" class="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg">Client</a>
         </div>
       </div>
 
