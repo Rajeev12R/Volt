@@ -3,10 +3,10 @@ import { gsap } from "gsap";
 import rajeev from "../assets/IMG_20250110_160220.jpg";
 
 const teamMembers = [
-  { name: "Arun", role: "CEO", img: rajeev },
+  { name: "Arun Changra", role: "CEO & Founder", img: rajeev },
   { name: "Rajeev Ranjan", role: "Head Developer", img: rajeev },
-  { name: "Sneha", role: "Content Writer", img: rajeev },
-  { name: "Aditi", role: "Content Writer and Graphics Designer", img: rajeev },
+  { name: "Sneha Tiwari", role: "Content Writer", img: rajeev },
+  { name: "Aditi Sable", role: "Graphics Designer", img: rajeev },
 ];
 
 const Team = () => {
