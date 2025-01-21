@@ -77,7 +77,7 @@ const Home = () => {
 
       <div className="flex items-center mt-16 justify-center">
         <div
-          className="about flex mt-8 mx-4 text-center text-lg md:text-2xl justify-center max-w-[1000px] items-center"
+          className="about flex mt-8 mx-4 text-center sm:text-md text-lg md:text-2xl justify-center max-w-[1000px] items-center"
         >
           <h1 style={{ wordSpacing: "0.1em", lineHeight: "1.6" }} className="text-stone-600 " id='about'>
             At Volt Studio, we don’t just market— we create experiences. We’ve had the privilege of working with

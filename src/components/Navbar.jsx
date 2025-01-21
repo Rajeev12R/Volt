@@ -19,7 +19,6 @@ const Navbar = () => {
       },
     });
 
-
     gsap.to('.navbar', {
       opacity: 1,
       y: 0,
@@ -40,7 +39,6 @@ const Navbar = () => {
       section.scrollIntoView({
         behavior: 'smooth', 
         block: 'nearest', 
-
       });
     }
   };
@@ -64,13 +62,13 @@ const Navbar = () => {
           >
             Gallery
           </a>
-          <a
+          {/* <a
             href="#"
             className="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg"
             onClick={() => handleScrollTo('clients')}
           >
             Clients
-          </a>
+          </a> */}
         </div>
       </div>
     </nav>
