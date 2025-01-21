@@ -71,7 +71,7 @@ const Navbar = () => {
     <nav className="w-full">
       <div className="logo flex flex-col items-center justify-center">
         <img src={logo} alt="" height={200} width={200} className="p-2 mb-4" />
-        <div className="fixed top-32 flex gap-4 items-center justify-center p-3 outline outline-gray-200 bg-white rounded-2xl max-w-full sm:max-w-4xl h-10">
+        <div className=" top-32 flex gap-4 items-center justify-center p-3 outline outline-gray-200 bg-white rounded-2xl max-w-full sm:max-w-4xl h-10">
           <a
             href="#"
             className="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg"

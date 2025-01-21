@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import rajeev from "../assets/IMG_20250110_160220.jpg";
+// import rajeev from "../assets/IMG_20250110_160220.jpg";
+import defaultImg from "../assets/icon-1633250_1280.png";
 
 const teamMembers = [
-  { name: "Arun Changra", role: "CEO & Founder", img: rajeev },
-  { name: "Rajeev Ranjan", role: "Head Developer", img: rajeev },
-  { name: "Sneha Tiwari", role: "Content Writer", img: rajeev },
-  { name: "Aditi Sable", role: "Graphics Designer", img: rajeev },
+  { name: "Arun Changra", role: "CEO & Founder", img: defaultImg },
+  { name: "Rajeev Ranjan", role: "Head Developer", img: defaultImg },
+  { name: "Sneha Tiwari", role: "Content Writer", img: defaultImg },
+  { name: "Aditi Sable", role: "Graphics Designer", img: defaultImg },
 ];
 
 const Team = () => {
