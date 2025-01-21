@@ -3,11 +3,10 @@ import { gsap } from "gsap";
 import rajeev from "../assets/IMG_20250110_160220.jpg";
 
 const teamMembers = [
-  { name: "Arun", role: "CEO of VoltStudio", img: rajeev },
-  { name: "Rajeev Ranjan", role: "Web Developer", img: rajeev },
-  { name: "Sneha", role: "Content and Graphics Expert", img: rajeev },
-  { name: "Aditi", role: "Content and Graphics Expert", img: rajeev },
-  { name: "Hari", role: "Editing and Video Expert", img: rajeev },
+  { name: "Arun", role: "CEO", img: rajeev },
+  { name: "Rajeev Ranjan", role: "Head Developer", img: rajeev },
+  { name: "Sneha", role: "Content Writer", img: rajeev },
+  { name: "Aditi", role: "Content Writer and Graphics Designer", img: rajeev },
 ];
 
 const Team = () => {
@@ -35,7 +34,7 @@ const Team = () => {
   }, []);
 
   return (
-    <div className="work my-10 mx-auto w-full max-w-[1400px] px-4">
+    <div className="team my-10 mx-auto w-full max-w-[1400px] px-4">
       <div className="flex justify-center items-center">
         <h2 className="team-heading text-center text-3xl font-bold my-2 tracking-wide text-stone-600">
           Our Team
