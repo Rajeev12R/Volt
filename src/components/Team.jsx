@@ -46,7 +46,7 @@ const Team = () => {
           <div
             key={index}
             ref={(el) => (teamMembersRef.current[index] = el)}
-            className="team-member flex flex-col items-center w-36 h-36 justify-center p-3 transition-transform hover:scale-105"
+            className="team-member flex flex-col items-center w-36 h-36 justify-center p-3 mb-6 transition-transform hover:scale-105"
           >
             <img
               src={member.img}
