@@ -66,7 +66,7 @@ const Home = () => {
         {/* Text Content */}
         <div className="text-center md:text-left flex-1">
           <h1
-            className="heading text-4xl md:text-6xl font-bold text-stone-700 bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent"
+            className="heading text-4xl md:text-6xl p-2 md:p-3 font-bold bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent"
           >
             We shape the future of your brand.
           </h1>
