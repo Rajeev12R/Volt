@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
+import { useNavigate } from 'react-router-dom';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import logo from '../assets/image.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+  
   useEffect(() => {
     gsap.to('.navbar', {
       opacity: 0,
@@ -62,13 +66,13 @@ const Navbar = () => {
           >
             Gallery
           </a>
-          {/* <a
+          <a
             href="#"
             className="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg"
             onClick={() => navigate('/clients')}
           >
             Clients
-          </a> */}
+          </a>
         </div>
       </div>
     </nav>

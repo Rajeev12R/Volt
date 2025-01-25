@@ -1,57 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
-.gallery{
-  font-family: "Outfit", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 200px; /* Base height for rows */
-  gap: 20px; /* Adjusted gap */
-  position: relative;
-  padding: 20px;
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .text-container {
-  grid-column: 4 / 9; /* Center the text across 4 columns */
-  grid-row: 3 / 4; /* Vertically center the text */
-  background: linear-gradient(to right, #ff8c00, #ff4500, #ffa500);
-  -webkit-background-clip: text;
-  color: transparent;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
   text-align: center;
-  z-index: 1;
 }
 
-/* Image container */
+.text-inner {
+  flex: 1;
+}
+
+.text-up {
+  flex: 1;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  width: 100%;
+  padding: 16px;
+}
+
 .image-container {
+  position: relative;
   overflow: hidden;
   border-radius: 8px;
-  position: relative;
-  transition: transform 0.3s ease;
 }
 
-/* Portrait images */
-.image-container.portrait {
-  grid-column: span 3; /* Takes 3 grid columns */
-  grid-row: span 3; /* Takes 4 grid rows */
-}
-
-/* Landscape images */
-.image-container.landscape {
-  grid-column: span 6; /* Takes 5 grid columns */
-  grid-row: span 2; /* Takes 2 grid rows */
-}
-
-/* Image styles */
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
-/* Hover effect */
-.image-container:hover img {
-  transform: scale(1.1);
+.random-size {
+  grid-row-end: span 2; /* Default grid-row-end to span 2 */
 }

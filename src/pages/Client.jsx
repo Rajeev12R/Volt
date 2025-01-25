@@ -4,7 +4,10 @@ import Gallery from '../components/Gallery'
 const Client = () => {
   return (
     <div>
-        <Gallery />
+      {/* <h1>Gallery</h1> */}
+      <Gallery/>
+      <Gallery/>
+      <Gallery/>
     </div>
 
   )
