@@ -109,7 +109,7 @@ const Services = () => {
   ]
 
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-teal-500 mt-4 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="services bg-gradient-to-r from-blue-600 to-teal-500 mt-4 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div ref={headerRef} className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-white sm:text-5xl">

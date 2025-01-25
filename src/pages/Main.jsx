@@ -1,7 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
 import Home from '../components/Home';
-import Footer from '../components/Footer';
 import Work from '../components/Work';
 import Team from '../components/Team';
 const Main = () => {

@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 const App = () => {
   return (
-    <div className='w-full h-full bg-neutral-100 px-4 overflow-hidden'>
+    <div className='w-full h-full bg-neutral-100 overflow-hidden'>
       <Navbar/>
       <Routes>
       <Route path='/' element={<Main/>} />

@@ -3,10 +3,11 @@ import { gsap } from "gsap";
 import rajeev from "../assets/rajeev.jpeg";
 import aditi from "../assets/aditi.jpeg";
 import sneha from "../assets/IMG_2449.jpg"
-import defaultImg from "../assets/icon-1633250_1280.png";
+import arun from "../assets/arun3.jpeg"
+// import defaultImg from "../assets/icon-1633250_1280.png";
 
 const teamMembers = [
-  { name: "Arun Changra", role: "CEO & Founder", img: defaultImg },
+  { name: "Arun Changra", role: "CEO & Founder", img: arun },
   { name: "Rajeev Ranjan", role: "Head Developer", img: rajeev },
   { name: "Sneha Tiwari", role: "Content Writer", img: sneha },
   { name: "Aditi Sable", role: "Graphics Designer", img: aditi },
