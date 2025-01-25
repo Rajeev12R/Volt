@@ -31,30 +31,6 @@ const Navbar = () => {
         toggleActions: 'play none reverse none',
       },
     });
-    gsap.to('.navbar', {
-      opacity: 0,
-      y: -50,
-      ease: 'power1.out',
-      scrollTrigger: {
-        trigger: '.work',
-        start: 'top 90%',
-        end: 'top 50%',
-        scrub: true,
-      },
-    });
-
-    gsap.to('.navbar', {
-      opacity: 1,
-      y: 0,
-      ease: 'power1.out',
-      scrollTrigger: {
-        trigger: '.work',
-        start: 'top 90%',
-        end: 'top 50%',
-        scrub: true,
-        toggleActions: 'play none reverse none',
-      },
-    });
   }, []);
 
   const handleScrollTo = (id) => {
@@ -89,7 +65,7 @@ const Navbar = () => {
           {/* <a
             href="#"
             className="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg"
-            onClick={() => handleScrollTo('clients')}
+            onClick={() => navigate('/clients')}
           >
             Clients
           </a> */}
