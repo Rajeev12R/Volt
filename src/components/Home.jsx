@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import video from "../assets/file_example_MP4_480_1_5MG.mp4"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +20,7 @@ const Home = () => {
     );
 
     gsap.fromTo(
-      ".about",
+      ".subheading",
       { opacity: 0, y: 50 },
       {
         opacity: 1,
@@ -31,61 +32,71 @@ const Home = () => {
     );
 
     gsap.fromTo(
-      ".work",
-      { opacity: 0, y: 100 },
+      ".cta-button",
+      { scale: 0.8, opacity: 0 },
       {
+        scale: 1,
         opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: ".work",
-          start: "top 80%",
-          end: "top 50%",
-          scrub: true,
-        },
+        duration: 1,
+        ease: "elastic.out(1, 0.5)",
+        delay: 1,
       }
     );
 
     gsap.fromTo(
-      ".footer",
-      { opacity: 0, y: 100 },
+      ".illustration",
+      { opacity: 0, x: 100 },
       {
         opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: ".footer",
-          start: "top 80%",
-          end: "top 50%",
-          scrub: true,
-        },
+        x: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        delay: 1,
       }
     );
   }, []);
 
   return (
-    <div className="max-w-screen-xl flex flex-col justify-center mx-auto px-4">
+    <div className="relative max-w-screen-xl mx-auto px-4 pt-14 pb-10">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 -z-10 opacity-90"></div>
 
-      <div className="flex flex-col justify-center">
-        <h1
-          className="heading text-center text-3xl md:text-5xl py-2 px-1 mt-14 bg-gradient-to-r from-gray-500 to-zinc-600 bg-clip-text text-transparent"
-        >
-          <q style={{ wordSpacing: "0.1em" }} >
-            We are the working unit, for the difference of your brand's present and future.
-          </q>
-        </h1>
-      </div>
-
-
-      <div className="flex items-center mt-16 justify-center">
-        <div
-          className="about flex mt-8 mx-4 text-center sm:text-md text-lg md:text-2xl justify-center max-w-[1000px] items-center"
-        >
-          <h1 style={{ wordSpacing: "0.1em", lineHeight: "1.6" }} className="text-stone-600 " id='about'>
-            At Volt Studio, we don’t just market— we create experiences. We’ve had the privilege of working with
-            incredible brands, transforming their ideas into impactful campaigns that resonate. Our approach isn’t just
-            about strategy; it’s about crafting memorable stories that engage, inspire, and convert. Every project we
-            take on is fueled by creativity, innovation, and a deep passion for what we do. Together, we can build
-            something that not only stands out but makes a lasting impression.
+      {/* Main Content */}
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+        {/* Text Content */}
+        <div className="text-center md:text-left flex-1">
+          <h1
+            className="heading text-4xl md:text-6xl font-bold text-stone-700 bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent"
+          >
+            We shape the future of your brand.
           </h1>
+
+          <p
+            className="subheading text-lg md:text-2xl md:max-w-[80%] text-gray-500 mt-5 leading-relaxed"
+          >
+            At Volt Studio, we don’t just market; we craft experiences that resonate and inspire. Join us in creating
+            something extraordinary—something that makes an unforgettable impact.
+          </p>
+
+          <div className="mt-6">
+            <button
+              className="cta-button px-6 py-3 text-lg font-medium text-white bg-purple-600 hover:bg-purple-700 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Discover More
+            </button>
+          </div>
+        </div>
+
+        {/* Illustration */}
+        <div className="illustration flex-1 w-64 h-80">
+        <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="rounded-lg shadow-2xl h-full w-full object-cover"
+          />
         </div>
       </div>
     </div>
