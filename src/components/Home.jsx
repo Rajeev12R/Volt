@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { useNavigate } from "react-router-dom";
 import video from "../assets/file_example_MP4_480_1_5MG.mp4"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+
+  const navigate = useNavigate();
   useEffect(() => {
     gsap.fromTo(
       ".heading",
@@ -80,6 +83,7 @@ const Home = () => {
 
           <div className="mt-6">
             <button
+            onClick={() => navigate('/services')}
               className="cta-button px-6 py-3 text-lg font-medium text-white bg-purple-600 hover:bg-purple-700 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
             >
               Discover More

@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Navbar = () => {
 
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     gsap.to('.navbar', {
       opacity: 0,
@@ -55,14 +55,16 @@ const Navbar = () => {
           <a
             href="#"
             className="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg"
-            onClick={() => handleScrollTo('home')}
+            onClick={() => { handleScrollTo('home'); navigate('/'); }}
+
           >
             Home
           </a>
           <a
             href="#"
             className="p-2 hover:bg-[#EEEEEE] hover:bg-opacity-50 hover:rounded-lg"
-            onClick={() => handleScrollTo('gallery')}
+            onClick={() => { handleScrollTo('gallery'); navigate('/'); }}
+
           >
             Gallery
           </a>
